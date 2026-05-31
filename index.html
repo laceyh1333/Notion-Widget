@@ -19,7 +19,7 @@
     }
 
     #container {
-      background: linear-gradient(to bottom, rgba(102, 102, 153, 0.3) 13%, rgba(102, 0, 51, 0.3) 100%);
+      background: linear-gradient(to bottom, rgba(102, 102, 153, 0.7) 13%, rgba(102, 0, 51, 0.7) 100%);
       border: 4px double black;
       padding: 5px;
       text-align: center;
@@ -69,9 +69,9 @@
     let greet;
     if (hrs < 12)
       greet = "Good morning, Lacey";
-    else if (hrs < 17)
+    else if (hrs >= 12 && hrs <= 17)
       greet = "Good afternoon, Lacey";
-    else
+    else if (hrs >= 17 && hrs <= 24)
       greet = "Good evening, Lacey";
 
     const dateStr = `Today is ${dayName}, ${monthName} ${dayNum}`;
@@ -79,5 +79,7 @@
     document.getElementById("greeting").textContent = greet;
     document.getElementById("date").textContent = dateStr;
   </script>
+</body>
+</html>
 </body>
 </html>
